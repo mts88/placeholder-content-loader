@@ -10,7 +10,7 @@
       "prefix": "mts",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/placeholder-content/tsconfig.lib.json",
             "project": "projects/placeholder-content/ng-package.json"
@@ -36,13 +36,12 @@
               "projects/placeholder-content/tsconfig.lib.json",
               "projects/placeholder-content/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
-    }},
+    }
+  },
   "cli": {
     "analytics": "ab41f9b3-7519-4635-b86a-b4a63883f2e8"
   },
