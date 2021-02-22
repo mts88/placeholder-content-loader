@@ -9,5 +9,8 @@ jobs:
           name: install
           command: npm install
       - run:
+          name: build
+          command: npm build placeholder-content --prod
+      - run:
           name: release
           command: npm run semantic-release
