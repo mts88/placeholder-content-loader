@@ -1,6 +1,6 @@
 {
   "name": "placeholder-content-loader",
-  "version": "0.0.0-development",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
