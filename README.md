@@ -76,7 +76,7 @@ You can use these input for each component:
 
 ### Card
 
-![Card placeholder](https://github.com/mts88/placeholder-content-loader/blob/card.png?raw=true)
+![Card placeholder](https://mts88.github.com/placeholder-content-loader/card.jpg)
 
 ```html
 <div>
@@ -87,7 +87,7 @@ You can use these input for each component:
 
 ### Info
 
-![Info placeholder](https://github.com/mts88/placeholder-content-loader/blob/info.png?raw=true)
+![Info placeholder](https://mts88.github.com/placeholder-content-loader/info.jpg)
 
 ```html
 <div>
@@ -98,7 +98,7 @@ You can use these input for each component:
 
 ### Table
 
-![Table placeholder](https://github.com/mts88/placeholder-content-loader/blob/table.png?raw=true)
+![Table placeholder](https://mts88.github.com/placeholder-content-loader/table.jpg)
 
 ```html
 <div>
