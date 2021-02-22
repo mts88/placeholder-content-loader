@@ -13,7 +13,7 @@
     "format:fix": "pretty-quick --staged",
     "format:check": "prettier --config ./.prettierrc --list-different \"{projects,src,test}/**/*.ts\"",
     "copy:readme": "copyfiles ./README.md ./projects/placeholder-content",
-    "precommit": "run-s copy:readme format:fix lint",
+    "precommit": "run-s format:fix lint",
     "commit": "git-cz",
     "semantic-release": "semantic-release",
     "adjust-version": "npm-run-all adjust-version:*",
