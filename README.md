@@ -1,5 +1,120 @@
-# PlaceholderContentLoader
+# Placeholder Content Loader
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![CircleCI](https://circleci.com/gh/mts88/placeholder-content-loader.svg?style=shield)](https://circleci.com/gh/mts88/placeholder-content-loader) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![GitHub release](https://img.shields.io/github/release/mts88/placeholder-content-loader.svg)](https://GitHub.com/mts88/placeholder-content-loader/releases/) [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/) [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-Alpha version of Placeholder Content Loader
+This library is a simple collection of placeholder components, realized with the library [ngneat/content-loader](https://github.com/ngneat/content-loader).
+
+## Installation
+
+In order to install:
+
+```shell
+npm install --save placeholder-content
+```
+
+## How to use it?
+
+Import the module `PlaceholderContentModule` where do you need:
+
+```typescript
+import {
+  PlaceholderContentModule,
+  PlaceHolderColor,
+} from 'placeholder-content';
+
+const placeholderColorScheme: PlaceHolderColor = {
+  DARK: {
+    background: '#333333',
+    foreground: '#373737',
+  },
+  LIGHT: {
+    background: '#eeeeee',
+    foreground: '#e3e3e3',
+  },
+};
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PlaceholderContentModule.forRoot({
+      theme: 'dark',
+      colorScheme: placeholderColorScheme,
+    }),
+    // other imports...
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
+### Usage
+
+In your html use component:
+
+```html
+<div>
+  <mts-card-placeholder
+    [theme]="'light'"
+    [animate]="true"
+    [speed]="2"
+  ></mts-card-placeholder>
+  <div></div>
+</div>
+```
+
+You can use these input for each component:
+| Name | Type | Description |
+|--|--| -- |
+| theme | `ThemeSchema` | Theme of single placeholder (override global config). <br> _Default_: `'dark'` |
+| animate | `boolean` | Animation of placeholder. <br> _Default_: `true` |
+| speed | `number` | Speed of animation. <br> _Default_: `2`
+
+## Components
+
+### Card
+
+![Card placeholder](https://github.com/mts88/placeholder-content-loader/blob/card.png?raw=true)
+
+```html
+<div>
+  <mts-card-placeholder></mts-card-placeholder>
+  <div></div>
+</div>
+```
+
+### Info
+
+![Info placeholder](https://github.com/mts88/placeholder-content-loader/blob/info.png?raw=true)
+
+```html
+<div>
+  <mts-info-column-placeholder></mts-info-column-placeholder>
+  <div></div>
+</div>
+```
+
+### Table
+
+![Table placeholder](https://github.com/mts88/placeholder-content-loader/blob/table.png?raw=true)
+
+```html
+<div>
+  <mts-table-placeholder></mts-table-placeholder>
+  <div></div>
+</div>
+```
+
+## Compatibility
+
+- `@angular/core`: `^11.0.0` (not tested with 9 and 10)
+
+## Credits
+
+[ngneat/content-loader](https://github.com/ngneat/content-loader)
+
+## License
+
+MIT
