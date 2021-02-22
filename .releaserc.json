@@ -3,17 +3,11 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    [
-      "@semantic-release/exec",
-      {
-        "prepareCmd": "npm run copy:readme"
-      }
-    ],
     "@semantic-release/npm",
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "VERSION=${nextRelease.version} npm run adjust-version"
+        "prepareCmd": "VERSION=${nextRelease.version} npm run adjust-version && npm run copy:readme"
       }
     ],
     "@semantic-release/github",
