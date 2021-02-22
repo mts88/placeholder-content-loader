@@ -1,6 +1,14 @@
-import { ThemeSchema } from 'src/app/shared/models/theme';
+import { InjectionToken } from '@angular/core';
 
-import { PlaceHolderColor } from './models/color';
+import { PlaceHolderColor, ThemeSchema } from './models/color';
+
+/**
+ * PlaceholderContent Configuration
+ */
+export interface PlaceholderContentConfig {
+  theme: ThemeSchema;
+  colorScheme: PlaceHolderColor;
+}
 
 /**
  * Default color scheme
@@ -17,9 +25,13 @@ const PlaceholderColorScheme: PlaceHolderColor = {
 };
 
 /**
- * Placeholder configs
+ * Default Placeholder configs
  */
-export class PlaceholderContentConfig {
-  theme: ThemeSchema = 'dark';
-  colorScheme: PlaceHolderColor = PlaceholderColorScheme;
-}
+export const DEFAULT_CONFIG: PlaceholderContentConfig = {
+  theme: 'dark',
+  colorScheme: PlaceholderColorScheme,
+};
+
+export const MODULE_CONFIG = new InjectionToken<PlaceholderContentConfig>(
+  'MODULE_CONFIG',
+);
