@@ -40,6 +40,120 @@
           }
         }
       }
+    },
+    "placeholder-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/placeholder-app",
+      "sourceRoot": "projects/placeholder-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/placeholder-app",
+            "index": "projects/placeholder-app/src/index.html",
+            "main": "projects/placeholder-app/src/main.ts",
+            "polyfills": "projects/placeholder-app/src/polyfills.ts",
+            "tsConfig": "projects/placeholder-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/placeholder-app/src/favicon.ico",
+              "projects/placeholder-app/src/assets"
+            ],
+            "styles": ["projects/placeholder-app/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/placeholder-app/src/environments/environment.ts",
+                  "with": "projects/placeholder-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "placeholder-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "placeholder-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "placeholder-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/placeholder-app/src/test.ts",
+            "polyfills": "projects/placeholder-app/src/polyfills.ts",
+            "tsConfig": "projects/placeholder-app/tsconfig.spec.json",
+            "karmaConfig": "projects/placeholder-app/karma.conf.js",
+            "assets": [
+              "projects/placeholder-app/src/favicon.ico",
+              "projects/placeholder-app/src/assets"
+            ],
+            "styles": ["projects/placeholder-app/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/placeholder-app/tsconfig.app.json",
+              "projects/placeholder-app/tsconfig.spec.json",
+              "projects/placeholder-app/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/placeholder-app/e2e/protractor.conf.js",
+            "devServerTarget": "placeholder-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "placeholder-app:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "cli": {

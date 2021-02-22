@@ -1,6 +1,30 @@
 {
   "name": "placeholder-content",
-  "version": "1.0.1-alpha1",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "PRe-configured component of library ngneat/content-loader.",
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/mts88/placeholder-content-loader"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "angular",
+    "content loader",
+    "loading",
+    "facebook loading",
+    "table",
+    "card",
+    "placeholder",
+    "component"
+  ],
+  "author": {
+    "name": "Francesca Motisi",
+    "url": "https://github.com/mts88",
+    "email": "fsca.motisi@gmail.com"
+  },
   "peerDependencies": {
     "@angular/common": "~11.2.1",
     "@angular/core": "~11.2.1"

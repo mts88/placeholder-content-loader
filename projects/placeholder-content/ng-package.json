@@ -3,5 +3,6 @@
   "dest": "../../dist/placeholder-content",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["@ngneat/content-loader"]
 }
