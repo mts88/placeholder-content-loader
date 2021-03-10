@@ -60,6 +60,7 @@ In your html use component:
     [theme]="'light'"
     [animate]="true"
     [speed]="2"
+    [containerClass]="['custom-class-for-container']"
   ></mts-card-placeholder>
   <div></div>
 </div>
@@ -71,6 +72,7 @@ You can use these input for each component:
 | theme | `ThemeSchema` | Theme of single placeholder (override global config). <br> _Default_: `'dark'` |
 | animate | `boolean` | Animation of placeholder. <br> _Default_: `true` |
 | speed | `number` | Speed of animation. <br> _Default_: `2`
+| containerClass | `string` or `Array<string>` | Custom classes for placeholder container. <br> _Default_: `[]`
 
 ## Components
 

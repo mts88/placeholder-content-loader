@@ -8,7 +8,10 @@ import { PlaceholderComponent } from './../placeholder.component';
 @Component({
   selector: 'mts-table-placeholder',
   template: `
-    <mts-placeholder-container [theme]="theme">
+    <mts-placeholder-container
+      [theme]="theme"
+      [containerClass]="classOfContainer()"
+    >
       <content-loader
         [viewBox]="'0 0 100 40'"
         [speed]="speed"

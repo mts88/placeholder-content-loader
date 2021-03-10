@@ -1,7 +1,7 @@
 import { Component, Inject, Input, Optional } from '@angular/core';
 
-import { ColorScheme, ThemeSchema } from '../models/color';
-import { MODULE_CONFIG } from '../placeholder-content.config';
+import { ColorScheme, ThemeSchema } from '../../models/color';
+import { MODULE_CONFIG } from '../../placeholder-content.config';
 
 @Component({
   selector: 'mts-placeholder-component',
@@ -37,6 +37,12 @@ export class PlaceholderComponent {
   speed = 2;
 
   /**
+   * Class to pass into placeholder container
+   */
+  @Input()
+  containerClass: string | Array<string> = [];
+
+  /**
    * Base uri fix for placeholder (safari fix)
    */
   baseUri = window.location.pathname;
@@ -45,4 +51,14 @@ export class PlaceholderComponent {
    * @ignore
    */
   constructor(@Optional() @Inject(MODULE_CONFIG) private config) {}
+
+  /**
+   * Create class list
+   * @returns Composed class list
+   */
+  public classOfContainer(): string {
+    return typeof this.containerClass === 'string'
+      ? this.containerClass
+      : this.containerClass.join(' ');
+  }
 }
