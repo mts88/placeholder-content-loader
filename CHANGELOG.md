@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/mts88/placeholder-content-loader/compare/v1.2.0...v1.2.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* copy of readme ([36d65a8](https://github.com/mts88/placeholder-content-loader/commit/36d65a813f124d3806e850caf0c4d1b4e20579ac))
+
 # [1.2.0](https://github.com/mts88/placeholder-content-loader/compare/v1.1.0...v1.2.0) (2021-02-22)
 
 
