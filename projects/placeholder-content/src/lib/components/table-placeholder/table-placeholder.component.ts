@@ -8,13 +8,7 @@ import { PlaceholderComponent } from './../placeholder.component';
 @Component({
   selector: 'mts-table-placeholder',
   template: `
-    <div
-      class="table-container"
-      [ngClass]="{
-        'table-container--dark': theme === 'dark',
-        'table-container--light': theme === 'light'
-      }"
-    >
+    <mts-placeholder-container [theme]="theme">
       <content-loader
         [viewBox]="'0 0 100 40'"
         [speed]="speed"
@@ -63,7 +57,7 @@ import { PlaceholderComponent } from './../placeholder.component';
         <!-- footer -->
         <svg:rect x="80" y="33.5" rx="1" ry="1" width="15" height="3.5" />
       </content-loader>
-    </div>
+    </mts-placeholder-container>
   `,
   styleUrls: ['./table-placeholder.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

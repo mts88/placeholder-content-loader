@@ -11,6 +11,7 @@ import {
   MODULE_CONFIG,
   PlaceholderContentConfig,
 } from './placeholder-content.config';
+import { PlaceholderContainerComponent } from './components/placeholder-container/placeholder-container.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {
     CardPlaceholderComponent,
     InfoColumnPlaceholderComponent,
     TablePlaceholderComponent,
+    PlaceholderContainerComponent,
   ],
   imports: [CommonModule, ContentLoaderModule],
   exports: [
