@@ -8,3 +8,4 @@ export { ThemeSchema, PlaceHolderColor, ColorScheme } from './lib/models/color';
 export { CardPlaceholderComponent } from './lib/components/placeholders/card-placeholder/card-placeholder.component';
 export { InfoColumnPlaceholderComponent } from './lib/components/placeholders/info-column-placeholder/info-column-placeholder.component';
 export { TablePlaceholderComponent } from './lib/components/placeholders/table-placeholder/table-placeholder.component';
+export { FormPlaceholderComponent } from './lib/components/placeholders/form-placeholder/form-placeholder.component';
