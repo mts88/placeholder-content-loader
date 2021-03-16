@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { PlaceholderContentModule } from 'placeholder-content';
 
-import { PlaceholderContentModule } from './../../../placeholder-content/src/lib/placeholder-content.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 

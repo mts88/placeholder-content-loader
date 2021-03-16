@@ -1,19 +1,26 @@
 {
   "name": "placeholder-content-loader",
-  "version": "0.1.0",
+  "version": "1.3.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib:prepare": "ng build placeholder-content --prod",
+    "build:lib": "run-s build:lib:prepare copy:readme:dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format:fix": "pretty-quick --staged",
     "format:check": "prettier --config ./.prettierrc --list-different \"{projects,src,test}/**/*.ts\"",
+    "copy:readme:dist": "copyfiles ./README.md ./dist/placeholder-content",
+    "copy:readme": "copyfiles ./README.md ./projects/placeholder-content",
     "precommit": "run-s format:fix lint",
-    "commit": "git-cz --disable-emoji",
-    "semantic-release": "semantic-release"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
+    "adjust-version": "npm-run-all adjust-version:*",
+    "adjust-version:lib": "rjp ./projects/placeholder-content/package.json version $VERSION",
+    "adjust-version:main": "rjp package.json version $VERSION"
   },
   "private": true,
   "dependencies": {
@@ -34,16 +41,20 @@
     "@angular-devkit/build-angular": "~0.1102.1",
     "@angular/cli": "~11.2.1",
     "@angular/compiler-cli": "~11.2.1",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "commitizen": "^4.2.3",
+    "copyfiles": "^2.4.1",
     "git-cz": "^4.7.6",
     "husky": "^5.0.9",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.0.0",
+    "karma": "~5.2.3",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
@@ -54,6 +65,7 @@
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "protractor": "~7.0.0",
+    "replace-json-property": "^1.6.3",
     "semantic-release": "^17.3.9",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
@@ -73,5 +85,9 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mts88/placeholder-content-loader.git"
   }
 }

@@ -2,15 +2,29 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
     "@semantic-release/npm",
-    "@semantic-release/gitlab",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "VERSION=${nextRelease.version} npm run adjust-version && npm run copy:readme"
+      }
+    ],
+    "@semantic-release/github",
     [
       "@semantic-release/git",
       {
-        "assets": ["package.json", "package-lock.json"],
+        "assets": [
+          "package.json",
+          "projects/placeholder-content/package.json",
+          "CHANGELOG.md",
+          "projects/placeholder-content/README.md"
+        ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]
   ],
+  "pkgRoot": "dist/placeholder-content",
+  "branches": "main",
   "preset": "angular"
 }

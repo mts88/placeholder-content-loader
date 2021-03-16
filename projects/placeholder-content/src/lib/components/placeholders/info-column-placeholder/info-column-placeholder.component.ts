@@ -8,12 +8,9 @@ import { PlaceholderComponent } from '../placeholder.component';
 @Component({
   selector: 'mts-info-column-placeholder',
   template: `
-    <div
-      class="info-column-container"
-      [ngClass]="{
-        'info-column-container--dark': theme === 'dark',
-        'info-column-container--light': theme === 'light'
-      }"
+    <mts-placeholder-container
+      [theme]="theme"
+      [containerClass]="classOfContainer()"
     >
       <content-loader
         [viewBox]="'0 0 200 80'"
@@ -35,7 +32,7 @@ import { PlaceholderComponent } from '../placeholder.component';
         <svg:rect x="115" y="47" rx="2" ry="2" width="30" height="30" />
         <svg:rect x="150" y="47" rx="2" ry="2" width="30" height="30" />
       </content-loader>
-    </div>
+    </mts-placeholder-container>
   `,
   styleUrls: ['./info-column-placeholder.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

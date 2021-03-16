@@ -1,9 +1,9 @@
 {
   "name": "placeholder-content",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "license": "MIT",
-  "description": "PRe-configured component of library ngneat/content-loader.",
-   "repository": {
+  "description": "Pre-configured component of library ngneat/content-loader.",
+  "repository": {
     "type": "git",
     "url": "https://github.com/mts88/placeholder-content-loader"
   },

@@ -8,12 +8,9 @@ import { PlaceholderComponent } from './../placeholder.component';
 @Component({
   selector: 'mts-card-placeholder',
   template: `
-    <div
-      class="card-container"
-      [ngClass]="{
-        'card-container--dark': theme === 'dark',
-        'card-container--light': theme === 'light'
-      }"
+    <mts-placeholder-container
+      [theme]="theme"
+      [containerClass]="classOfContainer()"
     >
       <content-loader
         [viewBox]="'0 0 200 60'"
@@ -29,7 +26,7 @@ import { PlaceholderComponent } from './../placeholder.component';
         <svg:circle cx="165" cy="50" r="8" />
         <svg:circle cx="185" cy="50" r="8" />
       </content-loader>
-    </div>
+    </mts-placeholder-container>
   `,
   styleUrls: ['./card-placeholder.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

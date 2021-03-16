@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { ContentLoaderModule } from '@ngneat/content-loader';
 
-import { CardPlaceholderComponent } from './components/card-placeholder/card-placeholder.component';
-import { InfoColumnPlaceholderComponent } from './components/info-column-placeholder/info-column-placeholder.component';
-import { PlaceholderComponent } from './components/placeholder.component';
-import { TablePlaceholderComponent } from './components/table-placeholder/table-placeholder.component';
+import { PlaceholderContainerComponent } from './components/placeholder-container/placeholder-container.component';
+import { CardPlaceholderComponent } from './components/placeholders/card-placeholder/card-placeholder.component';
+import { InfoColumnPlaceholderComponent } from './components/placeholders/info-column-placeholder/info-column-placeholder.component';
+import { PlaceholderComponent } from './components/placeholders/placeholder.component';
+import { TablePlaceholderComponent } from './components/placeholders/table-placeholder/table-placeholder.component';
 import {
   DEFAULT_CONFIG,
   MODULE_CONFIG,
@@ -18,6 +19,7 @@ import {
     CardPlaceholderComponent,
     InfoColumnPlaceholderComponent,
     TablePlaceholderComponent,
+    PlaceholderContainerComponent,
   ],
   imports: [CommonModule, ContentLoaderModule],
   exports: [
