@@ -1,6 +1,6 @@
 # Placeholder Content Loader
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![CircleCI](https://circleci.com/gh/mts88/placeholder-content-loader.svg?style=shield)](https://circleci.com/gh/mts88/placeholder-content-loader) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![GitHub release](https://img.shields.io/github/release/mts88/placeholder-content-loader.svg)](https://GitHub.com/mts88/placeholder-content-loader/releases/) [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/) [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![CircleCI](https://circleci.com/gh/mts88/placeholder-content-loader.svg?style=shield)](https://circleci.com/gh/mts88/placeholder-content-loader) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![GitHub release](https://img.shields.io/github/release/mts88/placeholder-content-loader.svg)](https://GitHub.com/mts88/placeholder-content-loader/releases/) [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 
 This library is a simple collection of placeholder components, realized with the library [ngneat/content-loader](https://github.com/ngneat/content-loader).
 
@@ -76,6 +76,13 @@ You can use these input for each component:
 
 ## Components
 
+List of components:
+
+- [Card](#card)
+- [Form](#form)
+- [Info](#info)
+- [Table](#table)
+
 ### Card
 
 ![Card placeholder](https://mts88.github.com/placeholder-content-loader/card.jpg)
@@ -83,7 +90,16 @@ You can use these input for each component:
 ```html
 <div>
   <mts-card-placeholder></mts-card-placeholder>
-  <div></div>
+</div>
+```
+
+### Form
+
+![Form placeholder](https://mts88.github.com/placeholder-content-loader/form.jpg)
+
+```html
+<div>
+  <mts-form-placeholder></mts-form-placeholder>
 </div>
 ```
 
@@ -94,7 +110,6 @@ You can use these input for each component:
 ```html
 <div>
   <mts-info-column-placeholder></mts-info-column-placeholder>
-  <div></div>
 </div>
 ```
 
@@ -105,7 +120,6 @@ You can use these input for each component:
 ```html
 <div>
   <mts-table-placeholder></mts-table-placeholder>
-  <div></div>
 </div>
 ```
 

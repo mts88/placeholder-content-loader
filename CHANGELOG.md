@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/mts88/placeholder-content-loader/compare/v1.3.0...v1.4.0) (2021-03-16)
+
+
+### Features
+
+* add placeholder for forms ([ffaf9ff](https://github.com/mts88/placeholder-content-loader/commit/ffaf9ff8b5e0b63aedb2f6333c4d42c2ace81184))
+
 # [1.3.0](https://github.com/mts88/placeholder-content-loader/compare/v1.2.1...v1.3.0) (2021-03-10)
 
 
