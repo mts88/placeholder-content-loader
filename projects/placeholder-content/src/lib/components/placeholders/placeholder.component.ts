@@ -50,7 +50,7 @@ export class PlaceholderComponent {
   /**
    * @ignore
    */
-  constructor(@Optional() @Inject(MODULE_CONFIG) private config) {}
+  constructor(config) {}
 
   /**
    * Create class list
